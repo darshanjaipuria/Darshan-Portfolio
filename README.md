@@ -2,8 +2,6 @@
 
 # Darshan's Portfolio website [React Project]
 
-**Live Preview: [Open Link][preview]**
-
 ## Project Details
 
 A portfolio for a web designer. Used React js to make this portfolio. A clean design with full responsiveness.Added smooth scroll in the portfolio which will make the scroll experience really elegant.

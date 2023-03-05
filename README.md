@@ -1,5 +1,3 @@
-![](./ReadMeImages/ReadMeBanner.png)
-
 # Darshan's Portfolio website [React Project]
 
 **Live Preview: [Open Link][preview]**

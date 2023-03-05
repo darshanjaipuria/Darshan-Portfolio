@@ -11,6 +11,7 @@ const projects = [
     desc:
       'The project is a web application that allows users to track their expenses using the MERN stack. Users can add, edit, and delete transactions and view their expense history with a summary of their current balance.',
     img: Ruppee,
+    link: 'http://google.com',
   },
   {
     id: uuidv4(),
@@ -25,6 +26,7 @@ const projects = [
     desc:
       'Designed and developed a decentralized application for the supermarket industry, bringing the buying process into Web3.0 and similar to UPI.',
     img: SuperMarket,
+    link: 'http://google.com',
   },
   {
     id: uuidv4(),
@@ -32,6 +34,7 @@ const projects = [
     desc:
       'Created a project that predicts the minimum time to cook a dish based on its ingredients and external factor such has Temperature',
     img: Time2Cook,
+    link: 'http://google.com',
   },
   // {
   //   id: uuidv4(),

@@ -29,6 +29,13 @@ const ProjectItemStyles = styled.div`
     font-family: 'RobotoMono Regular';
     margin-top: 1rem;
   }
+  .projectButton {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    margin: 2rem 0;
+    color: royalblue;
+  }
   @media only screen and (max-width: 768px) {
     .projectItem__img {
       height: 350px;
@@ -40,6 +47,7 @@ export default function ProjectItem({
   img = ProjectImg,
   title = 'Project Name',
   desc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  link,
 }) {
   return (
     <ProjectItemStyles>
@@ -51,6 +59,16 @@ export default function ProjectItem({
           <h3 className="projectItem__title">{title}</h3>
         </Link>
         <p className="projectItem__desc">{desc}</p>
+        {link && (
+          <a
+            className="projectName"
+            href="link"
+            target="_blank"
+            rel="nonreferrer"
+          >
+            Open Project
+          </a>
+        )}
       </div>
     </ProjectItemStyles>
   );

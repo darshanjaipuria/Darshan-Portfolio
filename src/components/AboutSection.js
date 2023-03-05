@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+// import Button from './Button';
 import PText from './PText';
 import SectionTitle from './SectionTitle';
 import AboutImg from '../assets/images/IMG20230212115557.jpg';
@@ -124,8 +124,8 @@ export default function AboutSection() {
             in technology.
           </PText>
           <div className="aboutSection__buttons">
-            <Button btnText="Works" btnLink="/projects" />
-            <Button btnText="Read More" btnLink="/about" outline />
+            {/* <Button btnText="Works" btnLink="/projects" />
+            <Button btnText="Read More" btnLink="/about" outline /> */}
           </div>
         </div>
         <div className="aboutSection__right">

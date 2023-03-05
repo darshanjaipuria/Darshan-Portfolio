@@ -1,10 +1,13 @@
+<<<<<<< HEAD
 ![](./ReadMeImages/ReadMeBanner.png)
+
+=======
 
 # Darshan's Portfolio website [React Project]
 
 ## Project Details
 
-A portfolio for a web designer. Used React js to make this portfolio. A clean design with full responsiveness.Added smooth scroll in the portfolio which will make the scroll experience really elegant.
+A portfolio for a Fullstack Web Deveelper. Used React js to make this portfolio. A clean design with full responsiveness.Added smooth scroll in the portfolio which will make the scroll experience really elegant.
 
 ## Project Requirement
 
@@ -12,7 +15,7 @@ A portfolio for a web designer. Used React js to make this portfolio. A clean de
 1. JavaScript
 1. React Basic (optional)
 
-## What we are going to Use/learn
+## Dependencies
 
 - React
 - React Hooks

@@ -174,7 +174,7 @@ function HeroSection() {
               iusto ab. Expedita, laudantium eum non totam praesentium quam fuga
               iusto?
             </PText> */}
-            <Button btnLink="/projects" btnText="my projects" outline={false} />
+            {/* <Button btnLink="/projects" btnText="my projects" outline={false} /> */}
           </div>
           <div className="hero__social">
             <div className="hero__social__indicator">

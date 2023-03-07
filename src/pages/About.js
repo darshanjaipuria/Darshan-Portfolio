@@ -62,7 +62,7 @@ const AboutPageStyles = styled.div`
     padding: 10rem 0;
     .top-section {
       flex-direction: column;
-      gap: 5rem;
+      gap: 2rem;
     }
     .about__subheading {
       font-size: 1.8rem;
@@ -72,6 +72,12 @@ const AboutPageStyles = styled.div`
     }
     .about__info__heading {
       font-size: 3rem;
+    }
+    .about__info {
+      margin-left: 2rem;
+    }
+    .button {
+      margin-left: 2rem;
     }
   }
 `;
@@ -133,7 +139,7 @@ export default function About() {
               />
               <AboutInfoItem
                 title="FrontEnd"
-                items={['HTML', 'CSS', 'JavaScript', 'ReactJS', 'Tailwind']}
+                items={['HTML', 'CSS', 'JavaScript', 'ReactJS']}
               />
               <AboutInfoItem
                 title="BackEnd"

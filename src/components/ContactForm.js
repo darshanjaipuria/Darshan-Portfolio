@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useRef } from 'react';
-// import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 
@@ -40,14 +39,20 @@ const FormStyle = styled.div`
     border-radius: 8px;
     cursor: pointer;
   }
+  .success-message {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: white;
+  }
 `;
 
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
-  // const { reset, handleSubmit } = useForm();
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -63,13 +68,13 @@ export default function ContactForm() {
       .then(
         (result) => {
           console.log(result.text);
-          console.log('Message Sent Sucessfully');
+          console.log('Message Sent Successfully');
+          setSubmitted(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
-    // reset();
   };
 
   return (
@@ -100,6 +105,9 @@ export default function ContactForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
+          {submitted && (
+            <div className="success-message">Mail sent successfully!</div>
+          )}
           <button type="submit">Send</button>
         </form>
       </FormStyle>

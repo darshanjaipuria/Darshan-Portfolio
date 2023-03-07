@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeroImg from '../assets/images/Main_Image2.jpg';
-import Button from './Button';
+// import Button from './Button';
 // import PText from './PText';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
@@ -106,8 +106,12 @@ const HeroStyles = styled.div`
       min-height: 750px;
     }
     .hero__heading {
+      font-size: 2rem;
+      /* margin-bottom: -4rem; */
+      position: relative;
+      top: 4rem;
       font-size: 1.4rem;
-      margin-bottom: -3rem;
+      margin-bottom: 5rem;
       .hero__name {
         font-size: 4.5rem;
       }
@@ -151,6 +155,11 @@ const HeroStyles = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 400px) {
+    .hero__img {
+      max-width: 295px;
+    }
+  }
 `;
 
 // const Button = styled.div``;
@@ -178,11 +187,20 @@ function HeroSection() {
           </div>
           <div className="hero__social">
             <div className="hero__social__indicator">
-              <p>Follow</p>
+              <p>Links</p>
               <img src={SocialMediaArrow} alt="social media arrow" />
             </div>
             <div className="hero__social__text">
               <ul>
+                <li>
+                  <a
+                    href="https://github.com/darshanjaipuria"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GH
+                  </a>
+                </li>
                 <li>
                   <a
                     href="https://www.linkedin.com/in/darshannn-jain/"

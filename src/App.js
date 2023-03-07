@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import NavMenu from './components/NavMenu';
 import SmoothScrollBar from './components/SmoothScrollbar';
 import About from './pages/About';
@@ -29,7 +29,7 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
-          {/* <Footer /> */}
+          <Footer />
         </SmoothScrollBar>
       </Router>
     </>

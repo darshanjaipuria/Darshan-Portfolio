@@ -21,13 +21,13 @@ const FooterStyle = styled.div`
   .footer__col1__title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    margin-left: 14rem;
   }
   .copyright {
     background-color: var(--dark-bg);
     text-align: left;
     padding: 1rem 0;
     margin-top: 5rem;
-
     .para {
       margin-left: 0;
     }
@@ -40,11 +40,13 @@ const FooterStyle = styled.div`
         margin-top: 5rem;
       }
     }
-    .para {
-      font-size: 1.7rem;
-    }
     .footer__col1 .para {
       max-width: 100%;
+    }
+    .footer__col1__title {
+      text-align: left;
+      width: 30rem;
+      margin-left: 0;
     }
     .copyright {
       .container {
@@ -71,7 +73,7 @@ export default function Footer() {
             advancements in technology.
           </PText>
         </div>
-        <div className="footer__col2">
+        {/* <div className="footer__col2">
           <FooterCol
             heading="Important Links"
             links={[
@@ -97,7 +99,7 @@ export default function Footer() {
               },
             ]}
           />
-        </div>
+        </div> */}
         <div className="footer__col3">
           <FooterCol
             heading="Contact Info"
@@ -117,7 +119,7 @@ export default function Footer() {
             ]}
           />
         </div>
-        <div className="footer__col4">
+        {/* <div className="footer__col4">
           <FooterCol
             heading="Social Links"
             links={[
@@ -139,7 +141,7 @@ export default function Footer() {
               },
             ]}
           />
-        </div>
+        </div> */}
       </div>
       <div className="copyright">
         <div className="container">

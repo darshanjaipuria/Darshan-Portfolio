@@ -5,11 +5,12 @@ import PText from './PText';
 
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
-  padding-top: 10rem;
   .container {
     display: flex;
     gap: 3rem;
+    padding-top: 0rem;
   }
+  padding-top: 4rem;
   .footer__col1 {
     flex: 2;
   }
@@ -33,15 +34,21 @@ const FooterStyle = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
+    font-size: 0;
+    padding-top: 1rem;
+    .footer__col1 {
+      font-size: 1rem;
+    }
     .container {
       flex-direction: column;
       gap: 0rem;
       & > div {
-        margin-top: 5rem;
+        margin-top: 3rem;
       }
     }
     .footer__col1 .para {
       max-width: 100%;
+      font-size: 1.8rem;
     }
     .footer__col1__title {
       text-align: left;
@@ -49,7 +56,10 @@ const FooterStyle = styled.div`
       margin-left: 0;
     }
     .copyright {
+      margin-top: 1rem;
+      margin: 0px;
       .container {
+        height: 2rem;
         div {
           margin-top: 0;
         }

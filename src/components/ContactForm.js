@@ -38,12 +38,21 @@ const FormStyle = styled.div`
     padding: 1rem 4rem;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 1rem;
   }
   .success-message {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.8rem;
     color: white;
+  }
+  .submitted {
+    opacity: 0.7;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .input-animated {
+    transform: translateX(5px);
+    transition: transform 0.2s ease-in-out;
   }
 `;
 
@@ -70,6 +79,7 @@ export default function ContactForm() {
           console.log(result.text);
           console.log('Message Sent Successfully');
           setSubmitted(true);
+          form.current.classList.add('submitted');
         },
         (error) => {
           console.log(error.text);
@@ -83,27 +93,41 @@ export default function ContactForm() {
         <form ref={form} onSubmit={sendEmail}>
           <label>Your Name</label>
           <input
+            placeholder="John Doe"
             type="text"
             name="user_name"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onFocus={(e) => e.target.classList.add('input-animated')}
+            onBlur={(e) => e.target.classList.remove('input-animated')}
+            required // add required attribute
           />
+
           <label>Your Email Address</label>
           <input
             type="email"
+            placeholder="test@mail.com"
             name="user_email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onFocus={(e) => e.target.classList.add('input-animated')}
+            onBlur={(e) => e.target.classList.remove('input-animated')}
+            required // add required attribute
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" // add pattern attribute
           />
           <label>Message</label>
           <textarea
             type="text"
             name="message"
+            placeholder="Type your message!!"
             id="message"
             value={message}
+            required
             onChange={(e) => setMessage(e.target.value)}
+            onFocus={(e) => e.target.classList.add('input-animated')}
+            onBlur={(e) => e.target.classList.remove('input-animated')}
           />
           {submitted && (
             <div className="success-message">Mail sent successfully!</div>

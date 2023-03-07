@@ -11,8 +11,12 @@ const ProjectItemStyles = styled.div`
     overflow: hidden;
     display: inline-block;
     border: 3px solid var(--gray-2);
+    transition: transform 0.3s ease;
     img {
       height: 100%;
+    }
+    &:hover {
+      transform: scale(1.05);
     }
   }
   .projectItem__info {
@@ -52,8 +56,9 @@ export default function ProjectItem({
   return (
     <ProjectItemStyles>
       <Link to="/projects" className="projectItem__img">
-        <img src={img} alt="project img" />
+        <img src={img} alt="project img" className="projectItem__img" />
       </Link>
+
       <div className="projectItem__info">
         <Link to="#">
           <h3 className="projectItem__title">{title}</h3>

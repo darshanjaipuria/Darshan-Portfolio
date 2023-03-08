@@ -51,7 +51,7 @@ const FormStyle = styled.div`
     transition: opacity 0.5s ease-in-out;
   }
   .input-animated {
-    transform: translateX(5px);
+    transform: translateX(15px);
     transition: transform 0.2s ease-in-out;
   }
 `;
